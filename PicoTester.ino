@@ -26,6 +26,7 @@ int groupnumber=0; // Contatore per il numero di gruppi
 int groupdimension=0; // Contatore per la dimensione del gruppo durante l'iterazione
 int groupdimensions[4]={0}; // Vettore per le dimensioni dei gruppi durante l'iterazione
 
+int i,j,n,k; // Indici per i cicli for
 
 void setup() {
   Serial.begin(9600);
@@ -58,7 +59,7 @@ void loop() {
       delay(100); // Attendi un attimo per stabilizzare il segnale
 
       int analogValue = analogRead(analogReadPin);
-      if (analogReadPin < threshold) {
+      if (analogValue < threshold) {
         groupdimension++; // Incrementa di uno
         groups[groupnumber][groupdimension]=j; // Aggiungi il jesimo GND al gruppo in una posizione successiva alla prima per permettere di mettere li l'iesimo a cui risulta collegato
       } else {
@@ -74,7 +75,7 @@ void loop() {
     if (totestnumber==0) {
       groups[groupnumber][0]=i; // Aggiungi il GND corrente al gruppo
       break; // Esci dal ciclo se non ci sono più GND da testare
-    } else if (totestnumber=7-i){ //se l'iesimo è scollegato da tutti gli altri è isolato
+    } else if (totestnumber==7-i){ //se l'iesimo è scollegato da tutti gli altri è isolato
       disconnectedGND[disconnectednumber]=i; 
       disconnectednumber++; 
     } else if (totestnumber==1) { //se solo un GND risulta scollegato vuol dire che è isolato da tutti gli altri
@@ -100,21 +101,21 @@ void loop() {
   }  
   
   k=0;
-  while (groupdimensions[k]=!=0) { // finche la dimensione di un gruppo è diversa da 0 lo si rappresenta
-    serial.println("I GND:");
+  while (groupdimensions[k]!=0) { // finche la dimensione di un gruppo è diversa da 0 lo si rappresenta
+    Serial.println("I GND:");
     for (int j=0; j<groupdimensions[k]; j++) {
-      serial.print(" ");
-      serial.print(groups[k][j]);
+      Serial.print(" ");
+      Serial.print(groups[k][j]);
     }
-    serial.print(" sono collegati tra loro");
+    Serial.print(" sono collegati tra loro");
     k++;
   }
-  serial.println("I GND:");
+  Serial.println("I GND:");
   for (int j=0; j<disconnectednumber; j++) {
-    serial.print(" ");
-    serial.print(disconnectedGND[j]);
+    Serial.print(" ");
+    Serial.print(disconnectedGND[j]);
   }
-  serial.print(" sono completamente isolati");
+  Serial.print(" sono completamente isolati");
 
   delay(1000); // Legge ogni secondo
 }

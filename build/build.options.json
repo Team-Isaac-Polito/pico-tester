@@ -1,5 +1,5 @@
 {
-  "additionalFiles": "..\\..\\..",
+  "additionalFiles": "..\\..\\..,..\\..",
   "compiler.optimization_flags": "",
   "customBuildProperties": "compiler.cpp.extra_flags=-IC:/Users/pasqu/OneDrive/Desktop/Team_ISAAC/PicoTester/include -DMK1_MOD1,build.warn_data_percentage=75",
   "fqbn": "rp2040:rp2040:rpipico",
