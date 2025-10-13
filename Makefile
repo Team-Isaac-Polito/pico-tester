@@ -16,12 +16,12 @@ INCLUDE_PATHS = $(INCLUDE_DIR) $(LIBRARY_PATHS)
 CFLAGS += $(foreach dir, $(INCLUDE_PATHS), -I$(dir))
 CXXFLAGS += $(foreach dir, $(INCLUDE_PATHS), -I$(dir))
 
-SUCCESS_SYMBOL = " Compilation completed successfully! "
-ERROR_SYMBOL = " Compilation error! "
-COMPILATION_SYMBOL = " Compilation in progress... "
+SUCCESS_SYMBOL = "======================================== Compilation completed successfully ========================================="
+ERROR_SYMBOL = "======================================== Compilation error! ========================================"
+COMPILATION_SYMBOL = "======================================== Compilation in progress ========================================"
 
-MODULE_DEFINE ?= "MK1_MOD1"
-DESTINATION ?=  'E:\'
+MODULE_DEFINE ?= "MK2_MOD1"
+DESTINATION ?=  'D:\'
 
 MODULE =
 define print_green
@@ -43,10 +43,16 @@ PORT ?= $(shell arduino-cli board list | findstr "Raspberry Pi Pico" | for /f "t
 compile: clean_all
 	$(call print_green, $(COMPILATION_SYMBOL))
 	@arduino-cli compile --fqbn $(BOARD_FQBN) --build-path $(BUILD_DIR) $(SKETCH_PATH) --output-dir $(OUTPUT_DIR) $(LIBRARY_FLAGS) \
-		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir) -D$(MODULE_DEFINE)")
+		$(foreach dir, $(INCLUDE_PATHS), --build-property "compiler.cpp.extra_flags=-I$(dir) -D$(MODULE_DEFINE)") && \
+	$(call print_green, $(SUCCESS_SYMBOL)) || \
+	$(call print_red, $(ERROR_SYMBOL))
 
 compile_fast:
 	@arduino-cli compile --fqbn $(BOARD_FQBN) "$(SKETCH_PATH)"
+
+compile_all:
+	$(MAKE) compile BUILD_DIR=$(CURDIR)/build1 OUTPUT_DIR=$(CURDIR)/out_MK2_MOD1 MODULE_DEFINE="MK2_MOD1"
+	$(MAKE) compile BUILD_DIR=$(CURDIR)/build2 OUTPUT_DIR=$(CURDIR)/out_MK2_MOD2 MODULE_DEFINE="MK2_MOD2"
 
 # Upload .bin file
 upload:
