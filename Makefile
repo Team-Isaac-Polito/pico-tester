@@ -113,7 +113,7 @@ upload_bootsel:
 # -----------------------
 # Cleaning
 # -----------------------
-clean:
+clean: # edit this to clean specificly tested or tester
 	@echo BUILD_DIR is: "$(BUILD_DIR)"
 	@if exist "$(BUILD_DIR)" ( \
 		echo "Removing build folder..." & rd /s /q "$(BUILD_DIR)" & echo "Build folder removed." \
@@ -127,6 +127,14 @@ clean_output:
 		rd /s /q "$(OUTPUT_DIR)" & echo "Output folder cleaned." \
 	) else ( \
 		echo "No output to clean." \
+	)
+
+clean_all:
+	@echo "Cleaning ALL build artifacts under /build ..."
+	@if exist "$(CURDIR)\build" ( \
+		rd /s /q "$(CURDIR)\build" & echo "All build artifacts removed." \
+	) else ( \
+		echo "No build folder to remove." \
 	)
 
 # -----------------------
@@ -149,6 +157,7 @@ help:
 	@echo "  make all              - Compile + upload"
 	@echo "  make clean            - Remove build folder of current sketch"
 	@echo "  make clean_output     - Remove only output folder of current sketch"
+	@echo "  make clean_all		   - Clean all"
 	@echo "  make help             - Show this guide"
 	@echo "  make auto_com_port    - Print detected Pico COM port"
 	@echo "  make port             - List all boards/ports"
