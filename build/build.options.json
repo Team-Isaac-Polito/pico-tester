@@ -1,9 +1,0 @@
-{
-  "additionalFiles": "..\\..,..\\..\\..,..\\..\\..,..\\..\\..\\..\\..,..\\..\\..\\..\\..",
-  "compiler.optimization_flags": "",
-  "customBuildProperties": "compiler.cpp.extra_flags=-IC:/Users/franc/Desktop/isaac/minions/pico-tester/include -DMK2_MOD1,compiler.cpp.extra_flags=-IC:/Users/franc/Desktop/isaac/minions/pico-tester/lib/Display/src -DMK2_MOD1,build.warn_data_percentage=75",
-  "fqbn": "rp2040:rp2040:rpipico",
-  "hardwareFolders": "C:\\Users\\franc\\AppData\\Local\\Arduino15\\packages",
-  "otherLibrariesFolders": "C:\\Users\\franc\\Documents\\Arduino\\libraries",
-  "sketchLocation": "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester"
-}
