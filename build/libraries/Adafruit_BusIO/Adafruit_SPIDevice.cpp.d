@@ -1,5 +1,6 @@
-C:\Users\franc\Desktop\isaac\minions\pico-tester\build\sketch\pico-tester.ino.cpp.o: \
- C:\Users\franc\Desktop\isaac\minions\pico-tester\build\sketch\pico-tester.ino.cpp \
+C:\Users\franc\Desktop\isaac\minions\pico-tester\build\libraries\Adafruit_BusIO\Adafruit_SPIDevice.cpp.o: \
+ C:\Users\franc\Documents\Arduino\libraries\Adafruit_BusIO\Adafruit_SPIDevice.cpp \
+ C:\Users\franc\Documents\Arduino\libraries\Adafruit_BusIO\Adafruit_SPIDevice.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/Arduino.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/stdlib_noniso.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/RP2040Version.h \
@@ -133,19 +134,6 @@ C:\Users\franc\Desktop\isaac\minions\pico-tester\build\sketch\pico-tester.ino.cp
  C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/Bootsel.h \
  C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
- C:/Users/franc/Desktop/isaac/minions/pico-tester/lib/Display/src/Display.h \
- C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\libraries\Wire\src/Wire.h \
- C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/api/HardwareI2C.h \
- C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/ArduinoCore-API/api/HardwareI2C.h \
- C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
- C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
- C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GFX.h \
- C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/Print.h \
- C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/api/Print.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_GFX_Library/gfxfont.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_I2CDevice.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_SPIDevice.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\libraries\SPI\src/SPI.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\cores\rp2040/api/HardwareSPI.h \
  C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/ArduinoCore-API/api/HardwareSPI.h \
@@ -153,8 +141,4 @@ C:\Users\franc\Desktop\isaac\minions\pico-tester\build\sketch\pico-tester.ino.cp
  C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/spi.h \
  C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/spi.h \
  C:\Users\franc\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\4.6.1\libraries\SPI\src/SPIHelper.h \
- C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_SH110X/Adafruit_SH110X.h \
- C:\Users\franc\Documents\Arduino\libraries\Adafruit_GFX_Library/Adafruit_GrayOLED.h \
- C:/Users/franc/Desktop/isaac/minions/pico-tester/include/definitions.h \
- C:/Users/franc/Desktop/isaac/minions/pico-tester/include/bitmap_logos.h
+ C:/Users/franc/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/4.6.1/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/iobank0.h

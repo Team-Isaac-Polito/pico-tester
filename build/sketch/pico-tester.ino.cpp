@@ -1,5 +1,8 @@
 #line 1 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
 #include <Arduino.h>
+#include "Display.h"
+
+
 
 // Pin configurabili
 const int outputPin = 2;      // GPIO che invia 3.3V al pin GND da testare (tramite resistenza)
@@ -29,11 +32,11 @@ int groupdimensions[4]={0}; // Vettore per le dimensioni dei gruppi durante l'it
 
 int i,j,n,k; // Indici per i cicli for
 
-#line 31 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
+#line 34 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
 void setup();
-#line 45 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
+#line 48 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
 void loop();
-#line 31 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
+#line 34 "C:\\Users\\franc\\Desktop\\isaac\\minions\\pico-tester\\pico-tester.ino"
 void setup() {
   Serial.begin(9600);
 

@@ -1,4 +1,7 @@
 #include <Arduino.h>
+#include "Display.h"
+
+
 
 // Pin configurabili
 const int outputPin = 2;      // GPIO che invia 3.3V al pin GND da testare (tramite resistenza)
